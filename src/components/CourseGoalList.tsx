@@ -1,5 +1,5 @@
 import CourseGoals from "./CourseGoals.tsx"
-import { TypeCourseGoal } from "../App.tsx"
+import { type TypeCourseGoal } from "../App.tsx"
 type GoalListProps = {
     goals:TypeCourseGoal[];
     onDelete:(id:number)=>void
