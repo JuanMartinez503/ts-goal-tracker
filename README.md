@@ -1,27 +1,21 @@
-# React + TypeScript + Vite
+# Course Goals App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React app to manage and display course goals. Users can add new goals with titles and descriptions, and view a list of their course goals.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Description
 
-## Expanding the ESLint configuration
+This React app allows users to create and manage their course goals. It provides a user-friendly interface for adding, deleting, and viewing course goals.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- Add new goals with titles and descriptions.
+- View a list of course goals.
+- Delete goals from the list.
+- Responsive design with a header image.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+## URl
+[Live Application](https://ts-goal-tracker.netlify.app/)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Screenshot
+<img width="651" alt="Screenshot 2023-11-14 at 4 06 34 PM" src="https://github.com/JuanMartinez503/ts-goal-tracker/assets/116415860/398dd35d-074f-4f4d-9995-2480f0d8bbf4">
