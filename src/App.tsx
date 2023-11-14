@@ -17,19 +17,34 @@ export default function App() {
   const [goals,setGoal] = useState<TypeCourseGoal[]>([])
   const [title, setTitle] = useState<string>('')
   const [description, setDescription] = useState<string>('')
+  const [alert, setAlert] = useState<string>('')
+  const [error, setError] = useState<string>('')
+
 
   const handleAddGoal =(e:FormEvent)=>{
     e.preventDefault()
-setGoal((prevGoals=>{
-  const newGoal:TypeCourseGoal = {
-    id: Math.random(),
-    tittle:title,
-    description:description
-  }
-  setTitle('')
-  setDescription('')
-  return [...prevGoals, newGoal]
-}))
+    if(title && description){
+      setGoal((prevGoals=>{
+        const newGoal:TypeCourseGoal = {
+          id: Math.random(),
+          tittle:title,
+          description:description
+        }
+        setTitle('')
+        setDescription('')
+        setAlert('New goal has been created!')
+        setTimeout(()=>{
+          setAlert('')
+        },3000)
+        return [...prevGoals, newGoal]
+      }))
+    } else {
+      setError('Title or Description is/are missing')
+      setTimeout(()=>{
+        setError('')
+      },2000)
+    }
+
   }
   const handleTitle= (e:FormEvent<HTMLInputElement >)=>{
     e.preventDefault()
@@ -57,7 +72,10 @@ setGoal((prevGoals=>{
         <input type="text"value={description}
         onChange={handleDescription} />
       <button >Add Goal</button>
-
+      <div>
+        {alert && <div className='alert'>{alert}</div>}
+        {error && <div className='error'>{error}</div>}
+      </div>
       </form>
       <ul>
        <CourseGoalList goals={goals} onDelete={handleDelete}/>

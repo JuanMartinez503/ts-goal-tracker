@@ -13,7 +13,7 @@ const CourseGoals:FC<GoalsWithChildren> = ({title,children, onDelete,id})=>{
                 <article>
                     <div>
                         <h2>{title}</h2>
-                        <p>{children}</p>
+                        {children}
         
                     </div>
                     <button onClick={()=>onDelete(id)}>Delete</button>
