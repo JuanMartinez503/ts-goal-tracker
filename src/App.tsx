@@ -64,12 +64,11 @@ export default function App() {
         <h1>Your course goals</h1>
       </Header>
       <form onSubmit={handleAddGoal}>
-        <label htmlFor="title">Title</label>
-        <input type="
-        " value={title}
+        <label htmlFor="title"  >Title</label>
+        <input type="text" id='title' value={title}
         onChange={handleTitle}/>
-        <label htmlFor="description">Description</label>
-        <input type="text"value={description}
+        <label htmlFor="description" >Description</label>
+        <input type="text" id='description'  value={description}
         onChange={handleDescription} />
       <button >Add Goal</button>
       <div>
