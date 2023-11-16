@@ -76,9 +76,9 @@ export default function App() {
         {error && <div className='error'>{error}</div>}
       </div>
       </form>
-      <ul>
+      
        <CourseGoalList goals={goals} onDelete={handleDelete}/>
-      </ul>
+    
 
    
     </main>
