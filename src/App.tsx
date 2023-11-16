@@ -21,7 +21,7 @@ export default function App() {
   const [error, setError] = useState<string>('')
 
 
-  const handleAddGoal =(e:FormEvent)=>{
+  const handleAddGoal =(e:FormEvent<HTMLFormElement>)=>{
     e.preventDefault()
     if(title && description){
       setGoal((prevGoals=>{
